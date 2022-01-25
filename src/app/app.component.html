@@ -1,7 +1,20 @@
+<body>
 <h1>{{title}}</h1>
+<style>
+  body {
+      background-color: khaki;
+      margin-top: -32px;
+      margin-right: -62px;
+      margin-left: -62px;
+      padding: 10px;
+    }
+  h1 {text-align: center;}
+  nav {text-align: center;}
+</style>
 <nav>
   <a routerLink="/dashboard">Dashboard</a>
   <a routerLink="/heroes">Heroes</a>
 </nav>
+</body>
 <router-outlet></router-outlet>
 <app-messages></app-messages>
