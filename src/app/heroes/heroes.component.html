@@ -1,8 +1,15 @@
-<app-messages></app-messages>
+<p>Exercise1</p>
+<p id="test">Clock</p><br>
 
-<script></script>
-
+<p>Exercise3</p>
 <div>
-  <button (click)="getTime()">aa</button>
-  <p id="test">abc</p>
+  <button #blue value="blue" (click)="changeColor(blue.value)">blue</button>
+  <button #yellow value="yellow"(click)="changeColor(yellow.value)">yellow</button>
+  <button #green value="green"(click)="changeColor(green.value)">green</button>
+  <button #red value="red"(click)="changeColor(red.value)">red</button>
+  <button #white value="white"(click)="changeColor(white.value)">white</button>
 </div>
+<label id="color">Change my Color!</label><br>
+
+
+<br><app-messages></app-messages>

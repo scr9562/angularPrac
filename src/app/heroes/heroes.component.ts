@@ -17,6 +17,7 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit() {
     this.getHeroes();
+    this.getTime();
   }
 
   getTime(): void {
@@ -30,19 +31,38 @@ export class HeroesComponent implements OnInit {
     setInterval(this.getTime, 1000);
   }
 
+  getName(name: string): void {
+    name = name.trim();
+    var s = document.getElementById("name");
+    s!.innerHTML = "My name is " + name;
+  }
+
   getHeroes(): void {
     this.heroService.getHeroes()
       .subscribe(heroes => this.heroes = heroes);
   }
 
-  add(name: string): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.heroService.addHero({ name } as Hero)
-      .subscribe(hero => {
-        this.heroes.push(hero);
-      });
+  changeColor(color: string): void {
+    color = color.trim();
+    var t = document.getElementById("color");
+    switch (color) {
+      case 'blue':
+        t!.style.backgroundColor = 'blue';
+        break;
+      case 'yellow':
+        t!.style.backgroundColor = 'yellow';
+        break;
+      case 'green':
+        t!.style.backgroundColor = 'green';
+        break;
+      case 'red':
+        t!.style.backgroundColor = 'red';
+        break;
+      case 'white':
+        t!.style.backgroundColor = 'white';
+    }
   }
+
 
   delete(hero: Hero): void {
     this.heroes = this.heroes.filter(h => h !== hero);
