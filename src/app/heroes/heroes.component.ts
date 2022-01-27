@@ -31,12 +31,6 @@ export class HeroesComponent implements OnInit {
     setInterval(this.getTime, 1000);
   }
 
-  getName(name: string): void {
-    name = name.trim();
-    var s = document.getElementById("name");
-    s!.innerHTML = "My name is " + name;
-  }
-
   getHeroes(): void {
     this.heroService.getHeroes()
       .subscribe(heroes => this.heroes = heroes);
