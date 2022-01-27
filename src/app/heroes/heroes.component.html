@@ -1,8 +1,14 @@
-<app-messages></app-messages>
+<p>Exercise1</p>
+<p id="test">Clock</p><br>
 
-<script></script>
-
+<p>Exercise2</p>
 <div>
-  <button (click)="getTime()">aa</button>
-  <p id="test">abc</p>
+  <input #myName/>
+  <button (click)="getName(myName.value)">
+    Enter
+  </button>
 </div>
+<p id="name">Type your name!</p><br>
+
+
+<br><app-messages></app-messages>

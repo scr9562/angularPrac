@@ -17,6 +17,7 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit() {
     this.getHeroes();
+    this.getTime();
   }
 
   getTime(): void {
@@ -28,6 +29,12 @@ export class HeroesComponent implements OnInit {
     var time = "현재 시간 : " + hur + "시 " + min + "분 " + sec + "초";
     timeBoard!.innerHTML = time;
     setInterval(this.getTime, 1000);
+  }
+
+  getName(name: string): void {
+    name = name.trim();
+    var s = document.getElementById("name");
+    s!.innerHTML = "My name is " + name;
   }
 
   getHeroes(): void {
