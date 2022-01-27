@@ -9,3 +9,6 @@
 
 # After History
 ![image](https://user-images.githubusercontent.com/55376165/151310663-5bfe26a7-29e8-4b11-b882-ce34a94e25b2.png)
+
+# Branch Tree
+![image](https://user-images.githubusercontent.com/55376165/151319784-57505457-61d5-47ca-9748-e203f79ddfe0.png)
